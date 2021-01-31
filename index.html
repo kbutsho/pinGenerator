@@ -40,7 +40,7 @@
                                 <div class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button">C</div>
+                                <div class="button">B</div>
                                 <div class="button">0</div>
                                 <div class="button">C</div>
                             </div>
@@ -76,8 +76,14 @@
                         const digit = event.target.innerText;
                         if (isNaN(digit)) {
                             if (digit === "C") {
-                                var typedInput = document.getElementById("setPin");;
+                                var typedInput = document.getElementById("setPin");
                                 typedInput.value = "";
+                            }
+                            if (digit === "B") {
+                                var typedInput = document.getElementById("setPin");
+                                var NewTypedInput = typedInput.value;
+                                var Input = NewTypedInput.substring(0, NewTypedInput.length - 1);
+                                typedInput.value = Input;
                             }
                         }
                         else {
