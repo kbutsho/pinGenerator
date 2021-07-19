@@ -84,6 +84,7 @@
                                 var NewTypedInput = typedInput.value;
                                 var Input = NewTypedInput.substring(0, NewTypedInput.length - 1);
                                 typedInput.value = Input;
+
                             }
                         }
                         else {
@@ -93,7 +94,6 @@
                     });
                     // submit btn 
                     document.getElementById("submitBtn").addEventListener("click", function () {
-                        console.log("click");
                         const pin = document.getElementById("getPin").value;
                         const typedPin = document.getElementById("setPin").value;
                         if (pin === typedPin) {
